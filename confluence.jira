@@ -1,0 +1,74 @@
+# **CloudSheger Systems: AWS Commercial to AWS GovCloud Migration Guide**
+
+## **Overview**
+
+This Confluence page provides high-level guidance on migrating CloudSheger systems from AWS Commercial to AWS GovCloud. The purpose of this guide is to outline the steps and considerations necessary to ensure a smooth and compliant migration process. 
+
+## **What is GovCloud? – The Backstory**
+
+AWS GovCloud (US) is an isolated region of the AWS cloud, specifically designed to meet the stringent regulatory and compliance requirements set by the US government for sensitive workloads. This includes:
+
+- **FedRAMP High**
+- **DoD Impact Levels 4 and 5**
+- **International Traffic in Arms Regulations (ITAR)**
+- **Export Administration Regulations (EAR)**
+
+Due to these stringent requirements, physical and logical access to AWS GovCloud is restricted to US citizens who have been properly vetted.
+
+## **Migration of Major Resources / Services**
+
+### **Infrastructure as Code (IaC) Approach**
+
+CloudSheger uses **Terraform** for automating:
+
+- AMI Creation
+- EC2 Servers Provisioning
+- Application Deployment
+- Data Migration
+- App Configuration
+- Database Migration
+
+### **Database Types Migrated**
+
+- **PostgreSQL**
+- **MongoDB**
+- **Oracle**
+
+### **Application Deployment CI/CD**
+
+We utilize **Ansible** for configuration management and deployment automation once the infrastructure is in place.
+
+### **Monitoring Systems**
+
+Monitoring systems migrated include:
+
+- **Splunk**
+- **Nagios**
+- **AWS Monitoring Tools**
+
+## **Applications Under Migration**
+
+CloudSheger is migrating:
+
+- **Tumi**
+- **Azm**
+- **MuleSoft**
+
+## **Team / POC to Contact**
+
+For any questions, concerns, or support during the migration process, please reach out to the designated Points of Contact (POC) for each project or service. 
+
+- **Migration Team Lead**: [Contact Information](#)
+- **Database Migration POC**: [Contact Information](#)
+- **Application Deployment POC**: [Contact Information](#)
+- **Monitoring Systems POC**: [Contact Information](#)
+
+For a detailed list of team members and their contact details, please visit the [CloudSheger Team Directory](https://confluence.yourcompany.com/display/TEAM/CloudSheger+Team+Directory).
+
+---
+
+This guide serves as a living document. Updates and additional details will be added as the migration progresses to ensure all relevant information is captured and accessible to the CloudSheger team.
+
+---
+
+You can update the "Contact Information" placeholders with actual links to team member profiles or email addresses, and the directory link should lead to the specific Confluence page for your team's contact details.

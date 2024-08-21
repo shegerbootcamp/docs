@@ -1,0 +1,102 @@
+
+
+# **CloudSheger Systems: AWS Commercial to AWS GovCloud Migration Guide**
+
+## **Overview**
+
+This Confluence page provides high-level guidance on migrating CloudSheger systems from AWS Commercial to AWS GovCloud. The purpose of this guide is to outline the steps and considerations necessary to ensure a smooth and compliant migration process. 
+
+## **What is GovCloud? – The Backstory**
+
+AWS GovCloud (US) is an isolated region of the AWS cloud, specifically designed to meet the stringent regulatory and compliance requirements set by the US government for sensitive workloads. This includes:
+
+- **FedRAMP High**: Federal Risk and Authorization Management Program, which standardizes security assessment.
+- **DoD Impact Levels 4 and 5**: Department of Defense levels for controlled unclassified information (CUI).
+- **International Traffic in Arms Regulations (ITAR)**: Regulations controlling the export and import of defense-related articles and services.
+- **Export Administration Regulations (EAR)**: Regulations for controlling exports that could have implications on national security.
+
+Due to these stringent requirements, physical and logical access to AWS GovCloud is restricted to US citizens who have been properly vetted.
+
+## **Migration of Major Resources / Services**
+
+### **Infrastructure as Code (IaC) Approach**
+
+One of the significant advantages of cloud computing is the ability to create resources repeatedly using scripts, templates, or code. This approach, known as Infrastructure as Code (IaC), allows for the automated and consistent creation of cloud resources.
+
+At CloudSheger, we utilize **Terraform** as our primary IaC tool to automate the following processes:
+
+- **AMI Creation**: Automated creation of Amazon Machine Images (AMIs) for standardized deployments.
+- **EC2 Servers Provisioning**: Provisioning of Elastic Compute Cloud (EC2) instances to match the environments in AWS GovCloud.
+- **Application Deployment**: Automated deployment of applications in the new GovCloud environment.
+- **Data Migration**: Secure and compliant transfer of data from AWS Commercial to GovCloud.
+- **App Configuration**: Automated configuration of applications to ensure compatibility with GovCloud.
+- **Database Migration**: Migration of databases to GovCloud, ensuring data integrity and security.
+
+### **Database Types Migrated**
+
+The following databases have been successfully migrated from AWS Commercial to AWS GovCloud:
+
+- **PostgreSQL**
+- **MongoDB**
+- **Oracle**
+
+### **Application Deployment CI/CD**
+
+Once the infrastructure is ready—such as EC2 servers provisioned and databases migrated to GovCloud using our Infrastructure as Code (IaC)—we enabled **Ansible** as our configuration management and deployment automation tool. This process ensures a fully automated application deployment, streamlining the entire migration process.
+
+### **Monitoring Systems**
+
+During the migration process, we also migrated our monitoring systems simultaneously to avoid any gaps in monitoring coverage. This end-to-end migration of monitoring systems ensures continuous visibility into the health and performance of our infrastructure and applications.
+
+The following monitoring systems were migrated:
+
+- **Splunk**
+- **Nagios**
+- **AWS Monitoring Tools**
+
+## **Applications Under Migration**
+
+CloudSheger is currently migrating the following applications to AWS GovCloud:
+
+- **Tumi**: [Migration Details](#tumi-migration-details)
+- **Azm**: [Migration Details](#azm-migration-details)
+- **MuleSoft**: [Migration Details](#mulesoft-migration-details)
+
+## **Key Considerations**
+
+- **Compliance**: Ensure that all processes and configurations meet the compliance requirements of AWS GovCloud.
+- **Security**: Maintain the highest levels of security throughout the migration process, with special attention to sensitive data and critical applications.
+- **Testing**: Rigorous testing is necessary to validate that all services function correctly in the GovCloud environment.
+- **Documentation**: Thorough documentation of all steps taken during the migration to ensure traceability and reproducibility.
+
+---
+
+### **Tumi Migration Details**
+
+- **Current Status**: In Progress
+- **Key Challenges**: [Insert Details Here]
+- **Solutions Implemented**: [Insert Details Here]
+
+---
+
+### **Azm Migration Details**
+
+- **Current Status**: In Progress
+- **Key Challenges**: [Insert Details Here]
+- **Solutions Implemented**: [Insert Details Here]
+
+---
+
+### **MuleSoft Migration Details**
+
+- **Current Status**: In Progress
+- **Key Challenges**: [Insert Details Here]
+- **Solutions Implemented**: [Insert Details Here]
+
+---
+
+This guide is intended to serve as a living document. As the migration progresses, updates and additional details will be added to ensure that all relevant information is captured and accessible to the CloudSheger team.
+
+---
+
+Feel free to adjust the content based on your specific project details or as the migration continues.
